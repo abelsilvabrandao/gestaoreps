@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de REPs</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <h1>Controle de REPs</h1>
+        <div class="toolbar">
+            <button id="ativarTodos">Ativar</button>
+            <button id="pausarTodos">Pausar</button>
+            <button id="verificarTodos">Atualizar Importação</button>
+            <button id="adicionarRep">Adicionar REP</button>
+            <button id="toggleEdicao">Editar</button>
+        </div>
+    </header>
+
+    <main>
+        <table id="tabelaReps">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="checkbox-todos"></th>
+                    <th>CÓD. SERVICOM</th>
+                    <th>CÓD. CINGO</th>
+                    <th>N° DO RELÓG.</th>
+                    <th>IP</th>
+                    <th>GATEWAY</th>
+                    <th>LOCAL</th>
+                    <th>ÚLTIMA IMPORT.</th>
+                    <th>STATUS</th>
+                    <th>ONLINE?</th>
+                    <th>AÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rep-row">
+                    <td class="tick-cell"><input type="checkbox" class="rep-checkbox"></td>
+                    <td contenteditable="true">001</td>
+                    <td contenteditable="true">CNG001</td>
+                    <td contenteditable="true">3002630021695</td>
+                    <td contenteditable="true">192.168.7.26</td>
+                    <td contenteditable="true">192.168.7.1</td>
+                    <td contenteditable="true">CDEX II - PRINT POINT 3</td>
+                    <td>12/08/2025 09:45</td>
+                    <td><span class="status ativo"><span class='online-icon pulse'></span> Ativo</span></td>
+                    <td><span class="online-icon"></span></td>
+                    <td>
+                        <button class="verificar">&#x21bb; Conexão</button>
+                        <button class="pausar">&#10073;&#10073; Pausar</button>
+                        <button class="ativar">&#9654; Ativar</button>
+                        <button class="salvar" style="display:none">Salvar</button>
+                        <button class="excluir">&#128465; Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
